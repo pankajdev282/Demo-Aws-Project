@@ -7,8 +7,8 @@ const app = express()
 
 connectDB()
 app.use(express.json())
-app.get('/',()=>{
-    return status(200).json({
+app.get('/',(req,res)=>{
+    return res.status(200).json({
         success:"Welcome to Pankaj's World"
     })
 })
