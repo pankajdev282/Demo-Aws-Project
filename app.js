@@ -7,7 +7,11 @@ const app = express()
 
 connectDB()
 app.use(express.json())
-// app.get('/',getAllUser)
+app.get('/',()=>{
+    return status(200).json({
+        success:"Welcome to Pankaj's World"
+    })
+})
 
 app.use('/auth',authRoutes)
 app.use('/invoice',invoiceRoutes)
